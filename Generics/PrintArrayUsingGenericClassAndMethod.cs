@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    internal class GenericClass<E>
+    //          className<DataType>
+    internal class PrintArrayUsingGenericClassAndMethod<E>
     {
-        public static void ToPrint(E[] array)
+             // MethodName<DataType>(<DataType> argument)
+        public static void ToPrint<E>(E[] array)
         {
             Console.WriteLine("\nArray elements are: ");
             foreach(E element in array)
             {
-                Console.Write(element+" ");
+                Console.Write(element + " ");
             }
         }
     }

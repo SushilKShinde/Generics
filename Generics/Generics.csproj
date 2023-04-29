@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericClass.cs" />
-    <Compile Include="GenericMethod.cs" />
-    <Compile Include="PrintWithoutGenerics.cs" />
+    <Compile Include="PrintArrayUsingGenericClassAndMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
