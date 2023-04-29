@@ -12,7 +12,7 @@ namespace Generics
         {
             Console.WriteLine("Welcome to the Generic concept impimentation program");
             Console.WriteLine("Choose from the below options");
-            Console.WriteLine("1.Print Array\n");
+            Console.WriteLine("1.Print Array\n2.Print using generic method\n");
             int option = Convert.ToInt32(Console.ReadLine());
             int[] intArray = { 10, 20, 30, 40 };
             double[] doubleArray = { 10.20, 20.30, 30.40 };
@@ -23,6 +23,15 @@ namespace Generics
                     PrintWithoutGenerics.ToPrint(intArray);
                     PrintWithoutGenerics.ToPrint(doubleArray);
                     PrintWithoutGenerics.ToPrint(charArray);
+                    break;
+                case 2:
+                    //mention data type for argument after method name(not in argument bracket)
+                    GenericMethod.ToPrint<int>(intArray);
+                    GenericMethod.ToPrint<double>(doubleArray);
+                    GenericMethod.ToPrint<char>(charArray);
+                    break;
+                default:
+                    Console.WriteLine("Choose correct option");
                     break;
             }
         }
