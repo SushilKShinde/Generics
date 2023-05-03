@@ -13,7 +13,7 @@ namespace Generics
             Console.WriteLine("Welcome to the Generic concept impimentation program");
             Console.WriteLine("Program to find maximum int/float/dstring");
             Console.WriteLine("Choose the option");
-            Console.WriteLine("\n1.Find Max integere\n2.Find Max float\n3.Find Max string\n4.Max using generics ");
+            Console.WriteLine("\n1.Find Max integere\n2.Find Max float\n3.Find Max string\n4.Max using generics\n5.Find Maximum in Array using Generic ");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -56,6 +56,7 @@ namespace Generics
                         switch (option2)
                         {
                             case 'A':
+                                //to find maximun integer
                                 Console.WriteLine("Enter first integer");
                                 first = Convert.ToInt32(Console.ReadLine());
                                 Console.WriteLine("Enter second integer");
@@ -68,6 +69,7 @@ namespace Generics
                                 intMaxValue.MaxValue();                               
                                 break;
                             case 'B':
+                                //to find maximun float number
                                 Console.WriteLine("Enter first float number");
                                 first_float = Convert.ToSingle(Console.ReadLine());
                                 Console.WriteLine("Enter second float number");
@@ -79,13 +81,14 @@ namespace Generics
                                 floatMax.MaxValue();
                                 break;
                             case 'C':
+                                //to find maximun string based on ASCII values
                                 Console.WriteLine("Enter first string");
                                 first_string = Console.ReadLine();
                                 Console.WriteLine("Enter second string");
                                 second_string = Console.ReadLine();
                                 Console.WriteLine("Enter third string");
                                 third_string = Console.ReadLine();
-
+                                
                                 MaxUsingGenerics<string> stringMax = new MaxUsingGenerics<string>(first_string, second_string, third_string);   
                                 stringMax.MaxValue();
                                 break;
@@ -94,6 +97,12 @@ namespace Generics
                                 break;
                         }
                     }
+                    break;
+                case 5:
+                    // to find maximun number in an array
+                    int[] intArray = { 45,21,75,95,2,43,85 };
+                    GenericMaxInArray<int> obj = new GenericMaxInArray<int>(intArray);
+                    obj.PrinMaxValue();
                     break;
                 default:
                     Console.WriteLine("Choose correct option");
